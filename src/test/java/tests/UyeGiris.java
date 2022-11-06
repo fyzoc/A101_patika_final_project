@@ -1,5 +1,4 @@
 package tests;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
@@ -8,15 +7,12 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import utilities.ConfigReader;
 import utilities.Driver;
-
 import java.util.Iterator;
 import java.util.Set;
-
 import static utilities.Driver.driver;
 
 public class UyeGiris {
     Logger logger = (Logger) LogManager.getLogger(UyeGiris.class);
-
     @Test
     public void HepsiBuradaKullanıcıGiris() throws InterruptedException {
         //1.Kullanıcı Hepsiburada.com sitesini ziyaret eder.sayfanın acıldıgını dogrular.
