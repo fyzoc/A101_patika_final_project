@@ -11,10 +11,10 @@ import java.util.Iterator;
 import java.util.Set;
 import static utilities.Driver.driver;
 
-public class UyeGiris {
-    Logger logger = (Logger) LogManager.getLogger(UyeGiris.class);
+public class Signed {
+    Logger logger = (Logger) LogManager.getLogger(Signed.class);
     @Test
-    public void HepsiBuradaKullanıcıGiris() throws InterruptedException {
+    public void HepsiBuradaSignIn() throws InterruptedException {
         //1.Kullanıcı Hepsiburada.com sitesini ziyaret eder.sayfanın acıldıgını dogrular.
         HomePage homePage = new HomePage();
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
@@ -22,11 +22,11 @@ public class UyeGiris {
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(), "https://www.hepsiburada.com/");
         logger.info("Sayfanın acıldıgı dogrulandı");
         //Kullanıcı giriş işlemi yapılır.
-        homePage.giris_yap.click();
-        homePage.giris.click();
+        homePage.myAccount.click();
+        homePage.login.click();
         homePage.txtUserName.sendKeys("testfeytest@gmail.com");
         logger.info("Kullanıcı maili girildi");
-        homePage.buttonGiris.click();
+        homePage.btnLogin.click();
         homePage.txtPassword.sendKeys("qd*QRk*@PWh3j9g");
         logger.info("Kullanıcı sifresi girildi");
         homePage.btnEmailSelect.click();
@@ -40,7 +40,7 @@ public class UyeGiris {
         logger.info("Kullanıcı arama sayfasına istedigi ürünü yazar ve ürün ekrana gelir");
         //Kullanıcı, Arama sonucunda ekrana gelen ürün listesinden (veya tek bir sonuç da dönmüş olabilir) ürün seçer.
         Thread.sleep(2000);
-        jsexecutor.executeScript("arguments[0].click()", homePage.birinciUrunAc);
+        jsexecutor.executeScript("arguments[0].click()", homePage.openFirstItem);
         String parent = driver.getWindowHandle();
         Set<String> s = driver.getWindowHandles();
         Iterator<String> I1 = s.iterator();
@@ -54,19 +54,19 @@ public class UyeGiris {
         logger.info("Kullanıcı istedigi ürünün sayfasına yönlendirilir");
         //Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.
         jsexecutor.executeScript("arguments[0].click()", homePage.all_product);
-        jsexecutor.executeScript("arguments[0].click()", homePage.birinciUrunSepeteEkle);
+        jsexecutor.executeScript("arguments[0].click()", homePage.addToCartFirstItem);
         logger.info("Kullanıcının istedigi ürün birinci satıcıdan sepete eklenir");
         Thread.sleep(3000);
         jsexecutor.executeScript("arguments[0].click()", homePage.close_add_cart);
         Thread.sleep(4000);
-        jsexecutor.executeScript("arguments[0].click()", homePage.ikinciUrunSepeteEkle);
+        jsexecutor.executeScript("arguments[0].click()", homePage.addToCartSecondItem);
         Thread.sleep(2000);
         logger.info("Kullanıcının istedigi ürün ikinci bir satıcıdan sepete eklenir");
         //Seçilen ürünün doğru olarak eklendiği ‘Sepetim’ sayfasında doğrulanmalıdır.
-        jsexecutor.executeScript("arguments[0].click()", homePage.sepetim);
-        Assert.assertTrue(homePage.ürünDogrulama1.isDisplayed());
+        jsexecutor.executeScript("arguments[0].click()", homePage.shoppingCart);
+        Assert.assertTrue(homePage.verifyFirstItem.isDisplayed());
         logger.info("Kullanıcının, birinci satıcıdan ekledigi ürünün sepette oldugu dogrulanır");
-        Assert.assertTrue(homePage.ürünDogrulama2.isDisplayed());
+        Assert.assertTrue(homePage.verifySecondItem.isDisplayed());
         logger.info("Kullanıcının, ikini satıcıdan ekledigi ürünün sepette oldugu dogrulanır");
         Driver.closeDriver();
         logger.info("Test sonlandırılır");

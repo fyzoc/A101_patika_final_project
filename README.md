@@ -11,5 +11,5 @@ And the logs are attended to this file.
 
 # How the framework scheme is works
 Page Object Model used in this project.The webelement locaters are locate in pages package.
-And there are two test classes which named are "UyeGiris" and "UyeGirisSiz".
+And there are two test classes which named are "Signed" and "NotSigned".
 One of them tested : login to the page with username. Other one is tested :user login page without username. 
