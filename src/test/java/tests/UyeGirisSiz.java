@@ -1,5 +1,4 @@
 package tests;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
@@ -41,7 +40,7 @@ public class UyeGirisSiz {
         logger.info("Kullanıcı istedigi ürünün sayfasına yönlendirilir");
         //Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.
         jsexecutor.executeScript("arguments[0].click()", homePage.all_product);
-        jsexecutor.executeScript("arguments[0].click()", homePage.sepeteEkle_1);
+        jsexecutor.executeScript("arguments[0].click()", homePage.birinciUrunSepeteEkle);
         logger.info("Kullanıcının istedigi ürün birinci satıcıdan sepete eklenir");
         Thread.sleep(3000);
         jsexecutor.executeScript("arguments[0].click()", homePage.close_add_cart);

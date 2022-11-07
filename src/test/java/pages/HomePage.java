@@ -33,11 +33,11 @@ public class HomePage {
     @FindBy(xpath ="//div[@class='title-area']")
     public WebElement all_product;
 
-    @FindBy(xpath ="(//div[@data-test-id='carousel-grid-item'])[1]")
+    @FindBy(xpath ="(//*[text()='Stanley Klasik Trigger Action Seyahat Bardağı 0.47 LT'])[1]")
     public WebElement birinciUrunAc;
 
     @FindBy(xpath ="(//button[@data-bind='click: function() { return true;}, clickBubble: false'])[3]")
-    public WebElement sepeteEkle_1;
+    public WebElement birinciUrunSepeteEkle;
 
     @FindBy(xpath ="//a[@class='checkoutui-Modal-iHhyy79iR28NvF33vKJb']")
     public WebElement close_add_cart;

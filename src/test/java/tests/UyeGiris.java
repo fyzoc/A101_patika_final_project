@@ -20,7 +20,7 @@ public class UyeGiris {
         JavascriptExecutor jsexecutor = ((JavascriptExecutor) Driver.getDriver());
         Driver.getDriver().get(ConfigReader.getProperty("hepsiburada_url"));
         Assert.assertEquals(Driver.getDriver().getCurrentUrl(), "https://www.hepsiburada.com/");
-        logger.info("Sayfanın açıldıgı dogrulandı");
+        logger.info("Sayfanın acıldıgı dogrulandı");
         //Kullanıcı giriş işlemi yapılır.
         homePage.giris_yap.click();
         homePage.giris.click();
@@ -54,7 +54,7 @@ public class UyeGiris {
         logger.info("Kullanıcı istedigi ürünün sayfasına yönlendirilir");
         //Seçilen ürün için 2 tane farklı satıcıdan ürün seçilip sepete eklenir.
         jsexecutor.executeScript("arguments[0].click()", homePage.all_product);
-        jsexecutor.executeScript("arguments[0].click()", homePage.sepeteEkle_1);
+        jsexecutor.executeScript("arguments[0].click()", homePage.birinciUrunSepeteEkle);
         logger.info("Kullanıcının istedigi ürün birinci satıcıdan sepete eklenir");
         Thread.sleep(3000);
         jsexecutor.executeScript("arguments[0].click()", homePage.close_add_cart);
