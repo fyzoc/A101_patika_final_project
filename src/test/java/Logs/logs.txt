@@ -1,0 +1,10 @@
+2022-11-08 17:38:33 INFO  NotSigned:23 - Kullanıcının giris sayfasında oldugu dogrulanır
+2022-11-08 17:38:36 INFO  NotSigned:27 - Kullanıcı arama sayfasına istedigi ürünü yazar ve ürün ekrana gelir
+2022-11-08 17:38:43 INFO  NotSigned:40 - Kullanıcı istedigi ürünün sayfasına yönlendirilir
+2022-11-08 17:38:43 INFO  NotSigned:44 - Kullanıcının istedigi ürün birinci satıcıdan sepete eklenir
+2022-11-08 17:38:51 INFO  NotSigned:50 - Kullanıcının istedigi ürün ikinci satıcıdan sepete eklenir
+2022-11-08 17:38:55 INFO  NotSigned:55 - Kullanıcının, birinci satıcıdan ekledigi ürünün sepette olduğu dogrulanır
+2022-11-08 17:38:55 INFO  NotSigned:57 - Kullanıcının, ikinci satıcıdan ekledigi ürünün sepette olduğu dogrulanır
+2022-11-08 17:38:56 INFO  NotSigned:59 - Test sonlandırılır
+2023-03-03 12:15:55 INFO  NotSigned:23 - Kullanıcının giris sayfasında oldugu dogrulanır
+2023-03-03 12:16:05 INFO  NotSigned:27 - Kullanıcı arama sayfasına istedigi ürünü yazar ve ürün ekrana gelir
